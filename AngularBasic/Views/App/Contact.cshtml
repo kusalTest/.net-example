@@ -1,0 +1,24 @@
+﻿@model ContactViewModel
+
+@{
+    ViewData["Title"] = "Contact";
+}
+@section scripts { 
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}
+
+
+
+<h2>@ViewData["Title"]</h2>
+<h3>@ViewData["Message"]</h3>
+
+<form method="post">
+    <label asp-for="Name">Name: </label>
+    <input asp-for="Name"><span asp-validation-for="Name"></span>
+    <br>
+    <label asp-for="Mobile">Mobile: </label>
+    <input asp-for="Mobile"><span asp-validation-for="Mobile"></span>
+    <br>
+    <input type="submit" value="Submit" class="btn btn-success">
+</form> 
